@@ -1,0 +1,49 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{%static 'css/sb-admin.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="bg-dark">
+	<form method="post">
+        <div class="card card-login mx-auto mt-5">
+            <div class="container">
+                <div class="card-header">Entrar</div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    <p><label for="id_username">Usuário:</label> <input type="text" class="form-control" name="username" autofocus required id="id_username"></p>
+                    <p><label for="id_password">Senha:</label> <input type="password" class="form-control" name="password" required id="id_password"></p>
+                    <button type="submit" class="btn btn-success">Entrar</button>
+                </div>
+            </div>
+        </div>
+	</form>
+
+	<script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+
+    <script src="{% static 'js/sb-admin.min.js'%}"></script>
+
+    <script src="{% static 'vendor/chart.js/Chart.min.js'%}"></script>
+
+    <script src="{% static 'js/demo/chart-area-demo.js'%}"></script>
+    <script src="{% static 'js/demo/chart-pie-demo.js'%}"></script>
+</body>
+
+</html>
